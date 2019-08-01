@@ -28,6 +28,7 @@ public class ProductoController {
 	@GetMapping("/listar")
 	public List<Producto> listar(){
 		//return productoService.findAll();
+		System.out.println("\n\n *********** productos.listar/  *********  \n\n");
 		// Agregar al vuelo el puerto en el flujo del response
 		return productoService.findAll().stream().map(producto -> {
 			//producto.setPort(Integer.parseInt(env.getProperty("local.server.port")));
@@ -38,6 +39,7 @@ public class ProductoController {
 	
 	@GetMapping("/ver/{id}")
 	public Producto detalle(@PathVariable Long id){
+		System.out.println("\n\n *********** productos.ver/id  *********  \n\n");
 		Producto producto = productoService.findById(id);
 		//producto.setPort(Integer.parseInt(env.getProperty("local.server.port")));
 		producto.setPort(port);

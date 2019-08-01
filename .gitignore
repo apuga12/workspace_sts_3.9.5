@@ -44,3 +44,9 @@ ms-item/\.mvn/*
 ms-item/mvnw
 
 ms-item/mvnw\.cmd
+
+ms-eureka-server/\.mvn/*
+
+ms-eureka-server/mvnw
+
+ms-eureka-server/mvnw\.cmd
