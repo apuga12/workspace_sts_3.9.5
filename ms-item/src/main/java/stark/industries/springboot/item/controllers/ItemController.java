@@ -21,13 +21,14 @@ public class ItemController {
 	
 	@GetMapping("/listar")
 	public List<Item> listar(){
+		System.out.println("\n\n *********** item.listar/  *********  \n\n");
 		return itemService.findAll();
 	}
 	
 	@GetMapping("/ver/{id}/cantidad/{cantidad}")
 	public Item detalle(@PathVariable Long id, 
 			@PathVariable Integer cantidad) {
-		System.out.println("\n\n *********** SALIDA Item Service  *********  \n\n");
+		System.out.println("\n\n *********** item.ver/cantidad/  *********  \n\n");
 		return itemService.findById(id, cantidad);
 	}
 
