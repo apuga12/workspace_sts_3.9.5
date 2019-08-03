@@ -38,11 +38,21 @@ public class ProductoController {
 	}
 	
 	@GetMapping("/ver/{id}")
-	public Producto detalle(@PathVariable Long id){
+	public Producto detalle(@PathVariable Long id) throws Exception{
 		System.out.println("\n\n *********** productos.ver/id  *********  \n\n");
 		Producto producto = productoService.findById(id);
 		//producto.setPort(Integer.parseInt(env.getProperty("local.server.port")));
 		producto.setPort(port);
+		
+//		// Para probar Hystrix: 1. CircuitBreakes
+//		boolean ok = false;
+//		if(ok == false) {
+//			throw new Exception("No se pudo cargar el producto");
+//		}
+		
+//		// Para probar Hystrix: 2. Venciendo el timeout
+//		Thread.sleep(5000L);
+		
 		return producto;
 	}
 
