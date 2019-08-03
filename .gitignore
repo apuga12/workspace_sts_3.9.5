@@ -50,3 +50,12 @@ ms-eureka-server/\.mvn/*
 ms-eureka-server/mvnw
 
 ms-eureka-server/mvnw\.cmd
+
+
+
+ms-zuul-server/\.mvn/*
+
+ms-zuul-server/mvnw
+
+ms-zuul-server/mvnw\.cmd
+
